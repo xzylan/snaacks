@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Shuffle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .card {
+            width: 125px;
+            height: 150px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cards" id="cards">
+            <div class="card">mo7sen</div>
+            <div class="card" >msii</div>
+            <div class="card">farfin</div>
+            <div class="card">roboto</div>
+            <div class="card">shankouss</div>
+            <div class="card">fnar</div>
+        </div>
+        <button onclick="shuffleAndPick()">Shuffle and Pick</button>
+    </div>
+
+    <script>
+        function shuffleAndPick() {
+            const cards = Array.from(document.querySelectorAll('.card'));
+            const randomIndex = Math.floor(Math.random() * cards.length);
+            const pickedCard = cards[randomIndex];
+            
+            // Optional: Add some styling to show the picked card (e.g., border or background color)
+            cards.forEach(card => card.style.backgroundColor = '#fff'); // Reset background color
+            pickedCard.style.backgroundColor = '#dff0d8'; // Highlight the picked card
+            
+            // Shuffle cards
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i].textContent, cards[j].textContent] = [cards[j].textContent, cards[i].textContent];
+            }
+        }
+    </script>
+</body>
+</html>

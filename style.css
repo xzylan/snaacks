@@ -1,3 +1,14 @@
+body {
+    background-image: url(./images/jGlzr.png);
+}
+
+.header {
+    text-align: center; /* Centers the text */
+    font-weight: bold;  /* Makes the text bold */
+    color: gray; 
+    font-size: 100px;
+    text-shadow: 2px 2px 4px black;
+}
 
 .game {
     margin-top: 40px;
@@ -27,4 +38,30 @@
     width:100px;
     height: 100px;
     object-fit: contain;
+}
+
+.oak-button {
+    
+    background-color: #8e735b; /* Warm brown color */
+    color: #fff; /* White text for contrast */
+    border: none;
+    border-radius: 8px; /* Rounded corners for a cute effect */
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+.oak-button:hover {
+    background-color: #a67c52; /* Slightly lighter brown on hover */
+}
+
+.oak-button:active {
+    transform: scale(0.98); /* Slightly shrink on click for a press effect */
+}
+
+.oak-button:focus {
+    outline: none; /* Remove default focus outline */
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Shuffle</title>
+    <link rel="stylesheet" href="./dice.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .dice-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .dice {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            background-color: white;
+            border: 2px solid #000;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            user-select: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>free dices</h1>
+    <div class="dice-container">
+        <div class="dice" id="dice1">1</div>
+        <div class="dice" id="dice2">1</div>
+    </div>
+    <button id="shuffle">Shuffle Dice</button>
+
+    <script>
+        document.getElementById('shuffle').addEventListener('click', () => {
+            const dice1 = document.getElementById('dice1');
+            const dice2 = document.getElementById('dice2');
+
+            const roll = () => Math.floor(Math.random() * 6) + 1;
+
+            dice1.textContent = roll();
+            dice2.textContent = roll();
+        });
+    </script>
+</body>
+</html>

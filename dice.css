@@ -1,0 +1,64 @@
+/* styles.css */
+body {
+    background-image: url(./images/jGlzr.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Light, neutral background */
+    font-family: 'Arial', sans-serif;
+}
+
+.dice-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: #f9f4e9; /* Light beige background */
+    border: 2px solid #8e735b; /* Warm brown border */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    user-select: none;
+}
+
+button {
+    background-color: #8e735b; /* Warm brown color */
+    color: #fff; /* White text */
+    border: 1px solid #8e735b; /* Matching border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Comfortable padding */
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #a67c52; /* Lighter brown on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight shrink on click */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+h1 {
+    text-align: center; /* Centers the text */
+    font-weight: bold;  /* Makes the text bold */
+    color: gray; 
+    font-size: 100px;
+    text-shadow: 2px 2px 4px black;
+}
